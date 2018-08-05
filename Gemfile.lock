@@ -93,6 +93,8 @@ GEM
     guard-minitest (2.4.4)
       guard-compat (~> 1.2)
       minitest (>= 3.0)
+    httparty (0.16.2)
+      multi_xml (>= 0.5.2)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     jbuilder (2.7.0)
@@ -122,6 +124,7 @@ GEM
       minitest (>= 5.0)
       ruby-progressbar
     multi_json (1.13.1)
+    multi_xml (0.6.0)
     nenv (0.3.0)
     nio4r (2.3.1)
     nokogiri (1.8.4)
@@ -237,6 +240,7 @@ DEPENDENCIES
   faker (= 1.7.3)
   guard (= 2.13.0)
   guard-minitest (= 2.4.4)
+  httparty
   jbuilder (~> 2.5)
   jquery-rails (~> 4.3, >= 4.3.3)
   listen (>= 3.0.5, < 3.2)

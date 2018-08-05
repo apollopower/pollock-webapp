@@ -1,0 +1,11 @@
+<h1>Generate Mockups</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_tag('/pollock/show', method: 'get') do |f| %>
+      <%= label_tag(:business_category, 'Business Category') %>
+      <%= text_field_tag :business_category, "", class: 'form-control' %>
+      <%= submit_tag "Generate", class: "btn btn-primary"  %>
+    <% end %>
+  </div>
+</div>

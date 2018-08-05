@@ -1,0 +1,11 @@
+<h1>Pollock</h1>
+
+<% @json['hits'].in_groups_of(4, false).each do |group| %>
+  <div class="row">
+    <% group.each do |image_data| %>
+    <div class="col-md-3">
+      <%= image_tag(image_data['largeImageURL'], class: 'img-responsive') %>
+    </div>
+    <% end %>
+  </div>
+<% end %>

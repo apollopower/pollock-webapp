@@ -15,4 +15,9 @@ Rails.application.routes.draw do
 
   resources :account_activations, only: [:edit]
 
+  get '/pollock', to: 'pollock_pages#index'
+  get '/pollock/new', to: 'pollock_pages#new'
+  post '/pollock/new', to: 'pollock_pages#create'
+  get '/pollock/show', to: 'pollock_pages#show'
+
 end

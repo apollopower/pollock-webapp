@@ -1,0 +1,6 @@
+<h1>Pollock</h1>
+
+<%= @json['hits'].each do |hit| %>
+  <p><%= hit['largeImageURL'] %></p>
+  <%= image_tag(hit['largeImageURL'], alt: 'image') %>
+<% end %>
