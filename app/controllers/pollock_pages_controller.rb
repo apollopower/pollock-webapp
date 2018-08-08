@@ -1,18 +1,24 @@
 require 'url_api'
+require 'analysis_api'
 
 class PollockPagesController < ApplicationController
-  before_action :logged_in_user, only: [:new, :create, :show]
+  before_action :logged_in_user, only: [:main, :new, :create, :show, :analyze]
 
-  def new
+  def main
   end
-
-  def create
-    redirect_to root_url
+  
+  def new
   end
 
   def show
     api = UrlApi.new()
     @json = api.pixabay_search(params[:business_category])
+  end
+
+  def analyze
+    api = ImageAnalysis.new()
+    @labels = api.get_labels(params[:image_url])
+    @emotions = api.get_emotions(@labels)
   end
 
   private
