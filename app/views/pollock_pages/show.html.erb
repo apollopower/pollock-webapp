@@ -4,7 +4,11 @@
   <div class="row">
     <% group.each do |image_data| %>
     <div class="col-md-3">
-      <%= image_tag(image_data['largeImageURL'], class: 'img-responsive') %>
+      <%= form_tag('/pollock/analyze', method: 'get') do %>
+        <%= hidden_field_tag :image_url, image_data['previewURL'] %>
+        <%= hidden_field_tag :image, image_data['largeImageURL'] %>
+        <%= image_submit_tag(image_data['largeImageURL'], class: 'img-responsive') %>
+      <% end %>
     </div>
     <% end %>
   </div>

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get '/contact', to: 'static_pages#contact'
 
   get '/signup', to: 'users#new'
-  resources :users
+  resources :users, except: :index
 
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
@@ -19,5 +19,6 @@ Rails.application.routes.draw do
   get '/pollock/analyze', to: 'pollock_pages#analyze'
   get '/pollock/new', to: 'pollock_pages#new'
   get '/pollock/show', to: 'pollock_pages#show'
+  post '/pollock/show', to: 'pollock_pages#analyze'
 
 end

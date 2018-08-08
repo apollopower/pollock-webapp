@@ -1,5 +1,9 @@
 <div class='container'>
-    <%= image_tag  params[:image_url], class: 'img-responsive' %>
+    <% if params[:image].nil? %>
+        <%= image_tag params[:image], class: 'img-responsive' %>
+    <% else %>
+        <%= image_tag params[:image_url], class: 'img-responsive' %>
+    <% end %>
     <%= p @labels %>
     <%= p @emotions %>
 </div>
