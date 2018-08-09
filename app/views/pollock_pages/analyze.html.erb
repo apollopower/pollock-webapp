@@ -1,5 +1,5 @@
 <div class='container'>
-    <% if params[:image].nil? %>
+    <% if params[:image] %>
         <%= image_tag params[:image], class: 'img-responsive' %>
     <% else %>
         <%= image_tag params[:image_url], class: 'img-responsive' %>

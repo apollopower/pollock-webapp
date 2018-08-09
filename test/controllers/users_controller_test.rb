@@ -12,8 +12,8 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test 'should redirect index when not logged in' do
-    get pollock_path
+  test 'should redirect to login_path when not logged in' do
+    get pollock_show_path
     assert_redirected_to login_url
   end
 

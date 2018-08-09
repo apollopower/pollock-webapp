@@ -1,3 +1,6 @@
+<%= render 'layouts/modal_analyze' %>
+<%= render 'layouts/modal_generate' %>
+
 <div class="center jumbotron">
   <h1>Pollock AI</h1>
 
@@ -9,7 +12,8 @@
     <%= link_to "Sign up now", signup_path, class: "btn btn-lg btn-primary" %>
     <h4>Or <%= link_to "Log In", login_path  %></h4>
   <% else %>
-    <%= link_to "Start Pollock", pollock_path, class: "btn btn-lg btn-primary" %>
+    <%= button_tag "Analyze an Image", data: {toggle: 'modal', target: '#analyzeModalCenter'}, class: "btn btn-lg btn-primary" %>
+    <%= button_tag "Generate Mockups", data: {toggle: 'modal', target: '#generateModalCenter'}, class: "btn btn-lg btn-primary" %>
   <% end %>
 </div>
 <div class='center'>
