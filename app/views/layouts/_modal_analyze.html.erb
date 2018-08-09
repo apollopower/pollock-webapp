@@ -2,11 +2,10 @@
 <div class="modal fade" id="analyzeModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h3 class="modal-title" id="exampleModalLongTitle">Analyze an Image</h3>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+      <div class="modal-header center">
+        <h3 class="modal-title" id="exampleModalLongTitle">Image Analysis</h3>
+        <br>
+        <p>It's easy! Just paste an image URL for Pollock to analyze</p>
       </div>
       <div class="modal-body">
         <%= form_tag('/pollock/analyze', method: 'get') do |f| %>
@@ -14,7 +13,6 @@
             <%= text_field_tag :image_url, "", class: 'form-control' %>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <%= submit_tag "Analyze", class: "btn btn-primary"  %>
         <% end %>
       </div>

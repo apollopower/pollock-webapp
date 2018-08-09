@@ -33,6 +33,10 @@ textarea {
   }
 }
 
+.btn-home {
+  margin: 1rem;
+}
+
 /* header */
 
 #logo {
@@ -202,4 +206,30 @@ input {
     padding: 10px 0;
     border-bottom: 1px solid $gray-lighter;
   }
+}
+
+
+/* Image Analysis */
+
+@media screen and (min-width: 800px) {
+  .img-analyze {
+    max-width: 50%
+  }
+}
+
+.img-analyze {
+  display: block;
+  margin: auto;
+}
+
+#positive {
+  color: green;
+}
+
+#negative {
+  color: red;
+}
+
+#neutral {
+  color: navy;
 }

@@ -1,15 +1,21 @@
-<h1>Pollock</h1>
+<div class='container'>
+  <h1>Image Results</h1>
 
-<% @json['hits'].in_groups_of(4, false).each do |group| %>
-  <div class="row">
-    <% group.each do |image_data| %>
-    <div class="col-md-3">
-      <%= form_tag('/pollock/analyze', method: 'get') do %>
-        <%= hidden_field_tag :image_url, image_data['previewURL'] %>
-        <%= hidden_field_tag :image, image_data['largeImageURL'] %>
-        <%= image_submit_tag(image_data['largeImageURL'], class: 'img-responsive') %>
+  <div class='center jumbotron'>
+    <h4>Choose an image for Pollock to analyze</h4>
+  </div>
+
+  <% @json['hits'].in_groups_of(4, false).each do |group| %>
+    <div class="row">
+      <% group.each do |image_data| %>
+      <div class="col-md-3">
+        <%= form_tag('/pollock/analyze', method: 'get') do %>
+          <%= hidden_field_tag :image_url, image_data['previewURL'] %>
+          <%= hidden_field_tag :image, image_data['largeImageURL'] %>
+          <%= image_submit_tag(image_data['largeImageURL'], class: 'img-responsive') %>
+        <% end %>
+      </div>
       <% end %>
     </div>
-    <% end %>
-  </div>
-<% end %>
+  <% end %>
+</div>

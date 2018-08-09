@@ -1,9 +1,36 @@
 <div class='container'>
+    <h1>Pollock's Analysis</h1>
+</div>
+
+<div class='center jumbotron'>
     <% if params[:image] %>
-        <%= image_tag params[:image], class: 'img-responsive' %>
+        <%= image_tag params[:image], class: 'img-responsive img-analyze' %>
     <% else %>
-        <%= image_tag params[:image_url], class: 'img-responsive' %>
+        <%= image_tag params[:image_url], class: 'img-responsive img-analyze' %>
     <% end %>
-    <%= p @labels %>
-    <%= p @emotions %>
+    <br>
+    <h2>Overall Sentiment:</h2>
+    <% sentiment = @emotions['sentiment']['document'] %>
+    <% if sentiment['label'] == 'positive' %>
+        <h3 id='positive'><%= @emotions['sentiment']['document']['label'] %></h3> 
+    <% elsif sentiment['label'] == 'negative' %>
+        <h3 id='negative'><%= @emotions['sentiment']['document']['label'] %></h3>
+    <% elsif sentiment['label'] == 'neutral' %>
+        <h3 id='neutral'><%= @emotions['sentiment']['document']['label'] %></h3>
+    <% end %>
+    <h4><%= @emotions['sentiment']['document']['score'] %></h4>
+    <h2>Strongest Emotion:</h2>
+    <% strongest = @emotions['emotion']['document']['emotion'].max_by{|k,v| v} %>
+    <h3><%= strongest[0] %></h3>
+    <h4><%= number_to_percentage(strongest[1] * 100, precision: 2)%></h4>
+    <h2>Key Words:</h2>
+    <h4><%= @labels.join(", ") %></h4>
+    <br>
+    <h2>Emotion Scores:</h2>
+    <% @emotions['emotion']['document']['emotion'].each do |k,v| %>
+    <h4><%= "#{k}: #{number_to_percentage(v * 100, precision: 2)}" %></h4>
+    <% end %>
+</div>
+<div class='center'>
+    <%= button_tag "Try Another Image", data: {toggle: 'modal', target: '#analyzeModalCenter'}, class: "btn btn-lg btn-primary" %> 
 </div>

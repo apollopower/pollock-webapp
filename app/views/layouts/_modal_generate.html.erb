@@ -3,20 +3,21 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h3 class="modal-title" id="exampleModalLongTitle">Generate Mockups</h3>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <h3 class="modal-title center" id="exampleModalLongTitle">Generate Mockups</h3>
+        <br>
+        <p>
+          Provide a description of your business or kind of image you are looking for.
+          After that, you can use Pollock to do an analysis of any image you choose.
+        </p>
       </div>
       <div class="modal-body">
         <div class='form-group'>
             <%= form_tag('/pollock/show', method: 'get') do |f| %>
-                <%= label_tag(:business_category, 'Business Category', class: 'col-form-label') %>
+                <%= label_tag(:business_category, 'Business Category / Description', class: 'col-form-label') %>
                 <%= text_field_tag :business_category, "", class: 'form-control' %>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <%= submit_tag "Generate", class: "btn btn-primary"  %>
         <% end %>
       </div>

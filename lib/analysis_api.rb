@@ -20,7 +20,7 @@ class ImageAnalysis
 
     def get_emotions(labels)
 
-        text = labels.join(' ')
+        text = labels.join(', ')
         text = URI.escape(text)
 
         pollock_api = 'https://calm-cliffs-20905.herokuapp.com/api/v1/resources?image_caption='

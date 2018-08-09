@@ -1,22 +1,36 @@
-<%= render 'layouts/modal_analyze' %>
-<%= render 'layouts/modal_generate' %>
-
 <div class="center jumbotron">
-  <h1>Pollock AI</h1>
+  <h1 class="display-4">Pollock AI</h1>
 
-  <h2>
+  <p class='lead'>
     Analyze images with the power of Artifical Intelligence
-  </h2>
+  </p>
+
+  <hr class='my-4'>
 
   <% unless logged_in? %>
     <%= link_to "Sign up now", signup_path, class: "btn btn-lg btn-primary" %>
     <h4>Or <%= link_to "Log In", login_path  %></h4>
   <% else %>
-    <%= button_tag "Analyze an Image", data: {toggle: 'modal', target: '#analyzeModalCenter'}, class: "btn btn-lg btn-primary" %>
-    <%= button_tag "Generate Mockups", data: {toggle: 'modal', target: '#generateModalCenter'}, class: "btn btn-lg btn-primary" %>
+      <%= button_tag "Analyze an Image", data: {toggle: 'modal', target: '#analyzeModalCenter'}, class: "btn btn-lg btn-primary btn-home" %>
+      <%= button_tag "Generate Mockups", data: {toggle: 'modal', target: '#generateModalCenter'}, class: "btn btn-lg btn-success btn-home" %>
+    
   <% end %>
 </div>
 <div class='center'>
   <h3>What is Pollock?</h3>
-  <p>Pollock is an artifical intelligence solution to understand your visual content.<p>
+  <p>Pollock is an artifical intelligence solution created to understand your visual content.<p>
+</div>
+
+<div class="container">
+  <div class="row center">
+    <div class="col-md-4">
+      Blah
+    </div>
+    <div class="col-md-4">
+      Blah
+    </div>
+    <div class="col-md-4">
+      Blah
+    </div>
+  </div>
 </div>
