@@ -8,7 +8,7 @@
   <hr class='my-4'>
 
   <% unless logged_in? %>
-    <%= link_to "Sign up now", signup_path, class: "btn btn-lg btn-primary" %>
+    <%= link_to "Sign up now for Free", signup_path, class: "btn btn-lg btn-primary" %>
     <h4>Or <%= link_to "Log In", login_path  %></h4>
   <% else %>
       <%= button_tag "Analyze an Image", data: {toggle: 'modal', target: '#analyzeModalCenter'}, class: "btn btn-lg btn-primary btn-home" %>
