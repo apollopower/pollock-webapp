@@ -1,8 +1,8 @@
 <!--
 
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header class="navbar navbar-fixed-top navbar-inverse navbar-pollock">
   <div class="container">
-    <%= link_to "pollock ai", root_path, id: "logo" %>
+  <%= link_to image_tag("pollock_ai.png", class: "logo"), root_path, id: "logo" %> 
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home",   root_path %></li>
@@ -24,15 +24,23 @@
           <li><%= link_to "Log in", login_path %></li>
         <% end %>
       </ul>
+
+      <div class="icons">
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
+      </div>
+
     </nav>
   </div>
 </header>
 
 //-->
 
-<nav class="navbar navbar-expand-lg navbar-fixed-top navbar-inverse">
-  <div class="container">
-    <%= link_to "POLLOCK AI", root_path, id: "logo" %>       
+
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-inverse navbar-pollock">
+    <%= link_to image_tag("pollock_ai.png", class: "logo"), root_path, id: "logo" %>       
 
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="nav navbar-nav mr-auto mt-2 mt-lg-0 navbar-right">
@@ -55,5 +63,12 @@
         <% end %> 
       </ul>
     </div>
+
+  <div class="icons">
+    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-twitter-square"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-facebook-square"></i></a>
   </div>
-</nav>
+
+  </nav>
+</div>

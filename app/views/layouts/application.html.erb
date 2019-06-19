@@ -2,7 +2,7 @@
 <html>
   <head>
     <title><%= full_title(yield(:title)) %></title>
-    <%= favicon_link_tag 'favicon.ico'%>
+    <%= favicon_link_tag 'palette.ico'%>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Analyze Images with the power of AI">
     <meta name="og:image" content="../../assets/images/pollock_preview.png">
@@ -19,7 +19,7 @@
     <%= render 'layouts/header' %>
     <%= render 'layouts/modal_analyze' %>
     <%= render 'layouts/modal_generate' %>
-    <div class="container">
+    <div>
       <% flash.each do |message_type, message| %>
         <div class="alert alert-<%= message_type %>">
           <%= message %>
