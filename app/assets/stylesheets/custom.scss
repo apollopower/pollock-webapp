@@ -15,7 +15,8 @@ $light-grey: #777;
 /* universal */
 
 body {
-  padding-top: 60px;
+  padding-top: 50px;
+  color: #4D4D4D;
 }
 
 section {
@@ -37,21 +38,85 @@ textarea {
   margin: 1rem;
 }
 
+.alert {
+  margin-bottom: 0;
+}
+
 /* header */
 
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
+.navbar:before, 
+.navbar:after {
+  content: none;
+}
+
+.logo {
+  max-width: 10vw;
+}
+
+.navbar-pollock {
+  background-image: linear-gradient(rgb(155, 153, 153), rgb(71, 71, 71));
+  border-color:rgb(68, 68, 68);
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem 1.5rem;
+}
+
+.navbar-inverse .navbar-nav > li > a {
   color: #fff;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
   &:hover {
-    color: #fff;
-    text-decoration: none;
+    color: rgb(24, 23, 23);
   }
+}
+
+.icons {
+  align-self: center;
+  font-size: 2.5rem;
+  padding: 0 .5rem;
+
+  & a {
+    color: #fff;
+
+    &:hover {
+      color: rgb(24, 23, 23);
+    }
+  }
+}
+
+// home
+
+.background {
+  background-image: url("drip.jpeg");
+  background-repeat: repeat-x;
+  background-size: auto;
+  background-position: top center;
+}
+
+.bg-pollock {
+  margin: 5rem 8rem;
+  padding: 8rem 0;
+  background-color: #eaeaeabe;
+  border-radius: 15px;
+}
+
+.main-logo {
+  max-width: 50%;
+  margin: 2rem 4rem 4rem;
+}
+
+.login-path a {
+  color: #D10000;
+}
+
+.button-red {
+  border: 1px solid #D10000;
+  background-color: #D10000;
+  color: #fff;
+}
+
+.button-gray {
+  border: 1px solid #4D4D4D;
+  background-color: #4D4D4D;
+  color: #fff;
 }
 
 /* typography */
@@ -107,6 +172,9 @@ footer {
   }
 }
 
+.author {
+  font-size: .7rem;
+}
 /* miscellaneous */
 
 .debug_dump {
