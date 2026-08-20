@@ -1,0 +1,22 @@
+Bundler 4.0.16 is running, but your lockfile was generated with 2.0.2. Installing Bundler 2.0.2 and restarting using that version.
+Fetching gem metadata from https://rubygems.org/.
+Fetching bundler 2.0.2
+Installing bundler 2.0.2
+/home/apollo/.local/share/mise/installs/ruby/4.0.6/lib/ruby/gems/4.0.0/gems/bundler-2.0.2/lib/bundler/vendor/thor/lib/thor/error.rb:109:in '<class:Thor>': uninitialized constant DidYouMean::SPELL_CHECKERS (NameError)
+
+    DidYouMean::SPELL_CHECKERS.merge!(
+              ^^^^^^^^^^^^^^^^
+Did you mean?  DidYouMean::SpellChecker
+	from /home/apollo/.local/share/mise/installs/ruby/4.0.6/lib/ruby/gems/4.0.0/gems/bundler-2.0.2/lib/bundler/vendor/thor/lib/thor/error.rb:1:in '<top (required)>'
+	from /home/apollo/.local/share/mise/installs/ruby/4.0.6/lib/ruby/gems/4.0.0/gems/bundler-2.0.2/lib/bundler/vendor/thor/lib/thor/base.rb:4:in 'Kernel#require'
+	from /home/apollo/.local/share/mise/installs/ruby/4.0.6/lib/ruby/gems/4.0.0/gems/bundler-2.0.2/lib/bundler/vendor/thor/lib/thor/base.rb:4:in '<top (required)>'
+	from /home/apollo/.local/share/mise/installs/ruby/4.0.6/lib/ruby/gems/4.0.0/gems/bundler-2.0.2/lib/bundler/vendor/thor/lib/thor.rb:2:in 'Kernel#require'
+	from /home/apollo/.local/share/mise/installs/ruby/4.0.6/lib/ruby/gems/4.0.0/gems/bundler-2.0.2/lib/bundler/vendor/thor/lib/thor.rb:2:in '<top (required)>'
+	from /home/apollo/.local/share/mise/installs/ruby/4.0.6/lib/ruby/gems/4.0.0/gems/bundler-2.0.2/lib/bundler/vendored_thor.rb:8:in 'Kernel#require'
+	from /home/apollo/.local/share/mise/installs/ruby/4.0.6/lib/ruby/gems/4.0.0/gems/bundler-2.0.2/lib/bundler/vendored_thor.rb:8:in '<top (required)>'
+	from /home/apollo/.local/share/mise/installs/ruby/4.0.6/lib/ruby/gems/4.0.0/gems/bundler-2.0.2/lib/bundler/friendly_errors.rb:5:in 'Kernel#require'
+	from /home/apollo/.local/share/mise/installs/ruby/4.0.6/lib/ruby/gems/4.0.0/gems/bundler-2.0.2/lib/bundler/friendly_errors.rb:5:in '<top (required)>'
+	from /home/apollo/.local/share/mise/installs/ruby/4.0.6/lib/ruby/gems/4.0.0/gems/bundler-2.0.2/exe/bundle:21:in 'Kernel#require'
+	from /home/apollo/.local/share/mise/installs/ruby/4.0.6/lib/ruby/gems/4.0.0/gems/bundler-2.0.2/exe/bundle:21:in '<top (required)>'
+	from /home/apollo/Work/repos/pollock-webapp/bin/bundle:3:in 'Kernel#load'
+	from /home/apollo/Work/repos/pollock-webapp/bin/bundle:3:in '<main>'

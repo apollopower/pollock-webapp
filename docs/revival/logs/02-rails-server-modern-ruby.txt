@@ -1,0 +1,18 @@
+/home/apollo/.local/share/mise/installs/ruby/4.0.6/lib/ruby/gems/4.0.0/gems/bundler-2.0.2/lib/bundler/shared_helpers.rb:274:in 'Bundler::SharedHelpers#search_up': undefined method 'untaint' for an instance of String (NoMethodError)
+
+      current  = File.expand_path(SharedHelpers.pwd).untaint
+                                                    ^^^^^^^^
+	from /home/apollo/.local/share/mise/installs/ruby/4.0.6/lib/ruby/gems/4.0.0/gems/bundler-2.0.2/lib/bundler/shared_helpers.rb:261:in 'Bundler::SharedHelpers#find_file'
+	from /home/apollo/.local/share/mise/installs/ruby/4.0.6/lib/ruby/gems/4.0.0/gems/bundler-2.0.2/lib/bundler/shared_helpers.rb:253:in 'Bundler::SharedHelpers#find_gemfile'
+	from /home/apollo/.local/share/mise/installs/ruby/4.0.6/lib/ruby/gems/4.0.0/gems/bundler-2.0.2/lib/bundler/shared_helpers.rb:28:in 'Bundler::SharedHelpers#root'
+	from /home/apollo/.local/share/mise/installs/ruby/4.0.6/lib/ruby/gems/4.0.0/gems/bundler-2.0.2/lib/bundler.rb:234:in 'Bundler.root'
+	from /home/apollo/.local/share/mise/installs/ruby/4.0.6/lib/ruby/gems/4.0.0/gems/bundler-2.0.2/lib/bundler.rb:246:in 'Bundler.app_config_path'
+	from /home/apollo/.local/share/mise/installs/ruby/4.0.6/lib/ruby/gems/4.0.0/gems/bundler-2.0.2/lib/bundler.rb:273:in 'Bundler.settings'
+	from /home/apollo/.local/share/mise/installs/ruby/4.0.6/lib/ruby/gems/4.0.0/gems/bundler-2.0.2/lib/bundler/feature_flag.rb:21:in 'block in Bundler::FeatureFlag#settings_method'
+	from /home/apollo/.local/share/mise/installs/ruby/4.0.6/lib/ruby/gems/4.0.0/gems/bundler-2.0.2/lib/bundler/shared_helpers.rb:252:in 'Bundler::SharedHelpers#find_gemfile'
+	from /home/apollo/.local/share/mise/installs/ruby/4.0.6/lib/ruby/gems/4.0.0/gems/bundler-2.0.2/lib/bundler/shared_helpers.rb:34:in 'Bundler::SharedHelpers#default_gemfile'
+	from /home/apollo/.local/share/mise/installs/ruby/4.0.6/lib/ruby/gems/4.0.0/gems/bundler-2.0.2/lib/bundler/shared_helpers.rb:40:in 'Bundler::SharedHelpers#default_lockfile'
+	from /home/apollo/.local/share/mise/installs/ruby/4.0.6/lib/ruby/gems/4.0.0/gems/bundler-2.0.2/lib/bundler.rb:334:in 'Bundler.default_lockfile'
+	from /home/apollo/Work/repos/pollock-webapp/bin/spring:10:in '<top (required)>'
+	from bin/rails:3:in 'Kernel#load'
+	from bin/rails:3:in '<main>'

@@ -31,3 +31,26 @@ with a comment pointing at `revival`).
 `DECISIONS.md`, `metrics.md`, `logs/`, `transcripts/`, `media/`.
 Logs are numbered chronologically. Session discipline: dated header at start,
 transcript+commit at end.
+
+### Architecture baseline written
+`docs/revival/architecture-2018.md` — one-page description of the 2018 pipeline
+derived by reading the `v0-2018` code before any agent touched it. Baseline for
+contrasting with what the porting agent later infers.
+
+### Dead deps inventoried
+`docs/revival/dependency-inventory.md` — each dead gem, pinned version, why it
+breaks on Ruby 4.0.6 / Rails 8, and rough dates.
+
+## 2026-08-20 — First-contact failures captured
+
+Tee'd the two verbatim failures on modern Ruby 4.0.6 (Bundler 4.0.16):
+
+- `docs/revival/logs/01-bundle-install-modern-ruby.txt` — Bundler tried to
+  fall back to lockfile-era Bundler 2.0.2, which crashed:
+  `uninitialized constant DidYouMean::SPELL_CHECKERS (NameError)`.
+- `docs/revival/logs/02-rails-server-modern-ruby.txt` — `bin/rails` died in
+  Bundler 2.0.2's `shared_helpers.rb` on `undefined method 'untaint' for an
+  instance of String` (Ruby 4 removed `String#untaint`).
+
+Nothing was fixed. Per the Phase 0 gate, evidence is on disk only. Period Ruby
+(2.x) install is deferred to Phase 1.
